@@ -71,30 +71,30 @@ export class LoanEMIDetails extends LocalizeMixin(LitElement) {
           <h2>EMI Details</h2>
           <p>
             ${localize.msg('change-language:intRate')} :
-            <span>${this._data.interestRate} %</span>
+            <span>${this._data?.interestRate} %</span>
           </p>
           <p>
             ${localize.msg('change-language:mnthlyEmi')} :
-            <span>${this._data.monthlyEMI}</span>
+            <span>${this._data?.monthlyEMI}</span>
           </p>
           <p>
             ${localize.msg('change-language:pricipal')} :
-            <span>${this._data.principal}</span>
+            <span>${this._data?.principal}</span>
           </p>
           <p>
             ${localize.msg('change-language:interest')} :
-            <span>${this._data.interest}</span>
+            <span>${this._data?.interest}</span>
           </p>
           <p>
             ${localize.msg('change-language:TotalAmt')} :
-            <span>${this._data.totalAmount}</span>
+            <span>${this._data?.totalAmount}</span>
           </p>
         </div>
         <div class="btn-cont">
-          <lion-button class="cancel-btn btn" @click=${this._toBasicDetails}
+          <lion-button class="cancel-btn btn" @click=${()=>this._toBasicDetails()}
             >${localize.msg('change-language:btnCancel')}</lion-button
           >
-          <lion-button @click=${this._toCustomer} class="continue-btn btn"
+          <lion-button @click=${()=>this._toCustomer()} class="continue-btn btn"
             >${localize.msg('change-language:btnCont')}</lion-button
           >
         </div>

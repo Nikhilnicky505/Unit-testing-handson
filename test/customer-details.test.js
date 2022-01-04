@@ -22,5 +22,10 @@ it('checks for another spy',async ()=>{
     el.getMessage();
     expect(spys.called).to.be.true;
 });
+it('checks for handlers',async ()=>{
+    const el=await fixture(html `<customer-details></customer-details>`);
+    const vars=el.shadowRoot.querySelector('.validators')
+   expect(vars).to.be.accessible();
 
+})
 });
